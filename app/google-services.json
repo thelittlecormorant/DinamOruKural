@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "753976929097",
+    "project_id": "dhinam-oru-kural-bbc02",
+    "storage_bucket": "dhinam-oru-kural-bbc02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753976929097:android:7eeb467c87b60aae16c898",
+        "android_client_info": {
+          "package_name": "com.tlc.dinamorukural"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753976929097-q54oj91i254u9e33509p5kcfnrmvjvs6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXECAZuhloJrfZDKTP1DbprP4v8lOcLZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "753976929097-q54oj91i254u9e33509p5kcfnrmvjvs6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
