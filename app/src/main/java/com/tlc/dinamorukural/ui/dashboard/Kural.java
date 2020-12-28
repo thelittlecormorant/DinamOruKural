@@ -1,27 +1,42 @@
 package com.tlc.dinamorukural.ui.dashboard;
 
-import java.util.ArrayList;
-
 public class Kural {
-    private int no;
-    private String kuralName;
-    private String kuralMeaning;
-    private String kuralFile;
+    private String no;
+    private String kural;
+    private String meaning;
+    private String file;
 
-    public int getNo() {
+    public String getNo() {
         return no;
     }
 
-    public String getKuralName() {
-        return kuralName;
+    public String getKural() {
+        return kural;
     }
 
-    public String getKuralMeaning() {
-        return kuralMeaning;
+    public String getMeaning() {
+        return meaning;
     }
 
-    public String getKuralFile(){
-        return kuralFile;
+    public String getFile(){
+        return file;
     }
+
+    public void setNo(String no) {
+        this.no = no;
+    }
+
+    public void setKural(String kural) {
+        this.kural = kural;
+    }
+
+    public void setMeaning(String meaning) {
+        this.meaning = meaning;
+    }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
+
 
 }

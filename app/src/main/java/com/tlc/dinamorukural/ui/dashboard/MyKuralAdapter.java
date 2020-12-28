@@ -10,12 +10,18 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.tlc.dinamorukural.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MyKuralAdapter extends RecyclerView.Adapter<MyKuralAdapter.ViewHolder>{
-
+    final String TAG = "com.tlc.dinamorukural";
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView kuralNo;
         public TextView kuralName;
@@ -32,8 +38,8 @@ public class MyKuralAdapter extends RecyclerView.Adapter<MyKuralAdapter.ViewHold
     }
 
     private List<Kural> mKurals;
-    public MyKuralAdapter(List<Kural> contacts) {
-        mKurals= contacts;
+    public MyKuralAdapter(List<Kural> kuralList) {
+        mKurals=kuralList;
     }
 
     @Override
@@ -52,15 +58,16 @@ public class MyKuralAdapter extends RecyclerView.Adapter<MyKuralAdapter.ViewHold
     @Override
     public void onBindViewHolder(MyKuralAdapter.ViewHolder holder, int position) {
         // Get the data model based on position
+        Log.d(TAG,mKurals.toString());
         Kural kuralItem = mKurals.get(position);
 
         // Set item views based on your views and data model
         TextView tvKuralNo = holder.kuralNo;
         tvKuralNo.setText(kuralItem.getNo());
         TextView tvKuralName = holder.kuralName;
-        tvKuralName.setText(kuralItem.getKuralName());
+        tvKuralName.setText(kuralItem.getKural());
         TextView tvKuralMeaning = holder.kuralMeaning;
-        tvKuralMeaning.setText(kuralItem.getKuralMeaning());
+        tvKuralMeaning.setText(kuralItem.getMeaning());
 
         Button btPlay=holder.play;
         btPlay.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +82,9 @@ public class MyKuralAdapter extends RecyclerView.Adapter<MyKuralAdapter.ViewHold
     // Returns the total count of items in the list
     @Override
     public int getItemCount() {
-        return mContacts.size();
+        return mKurals.size();
     }
+
+
 
 }
