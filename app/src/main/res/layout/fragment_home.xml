@@ -47,4 +47,32 @@
         app:layout_constraintEnd_toEndOf="@+id/editText"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
+
+    <Button
+        android:id="@+id/action_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:showAsAction="never"
+        android:title="5 seconds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/action_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:showAsAction="never"
+        android:title="10 seconds"
+        app:layout_constraintStart_toStartOf="@+id/action_5"
+        app:layout_constraintTop_toBottomOf="@+id/action_5" />
+
+    <Button
+        android:id="@+id/action_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:showAsAction="never"
+        android:title="30 seconds"
+        app:layout_constraintStart_toStartOf="@+id/action_10"
+        app:layout_constraintTop_toBottomOf="@+id/action_10" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

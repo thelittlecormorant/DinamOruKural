@@ -101,7 +101,7 @@ public class MyKuralAdapter extends RecyclerView.Adapter<MyKuralAdapter.ViewHold
         StorageReference storageRef = storage.getReference();
         StorageReference pathRef=storageRef.child("kural audio/"+itemNo+".mpeg");
 
-        File storagePath = new File(Environment.getExternalStorageDirectory(), "dhinamorukural");
+        File storagePath = new File(Environment.getDownloadCacheDirectory(), "dhinamorukural");
 // Create direcorty if not exists
         if(!storagePath.exists()) {
             storagePath.mkdirs();
