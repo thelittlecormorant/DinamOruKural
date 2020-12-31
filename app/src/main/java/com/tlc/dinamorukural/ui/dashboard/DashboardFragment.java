@@ -1,6 +1,8 @@
 package com.tlc.dinamorukural.ui.dashboard;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,14 +17,20 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.tlc.dinamorukural.R;
 import com.tlc.dinamorukural.utils.FirebaseDBUtils;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,6 +47,7 @@ public class DashboardFragment extends Fragment {
         rvKuralList = (RecyclerView) root.findViewById(R.id.rvContacts);
         // Set layout manager to position the items
         rvKuralList.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
+
         readKuralDB();
         return root;
     }
@@ -81,4 +90,6 @@ public class DashboardFragment extends Fragment {
             }
         });
     }
+
+
 }
